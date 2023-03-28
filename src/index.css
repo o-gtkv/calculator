@@ -1,13 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import-normalize;
+
+:root {
+    --bg-color: #3b4664;
+    --color: #feffff;
+    --theme-switcher-bg-color: #222a41;
+    --theme-switcher-color: #d63c34;
+    --display-bg-color: #181f32;
+    --display-color: #fdfffe;
+    --btns-panel-bg-color: #252d44;
+    --btn-bg-color: #eae3db;
+    --btn-color: #494b57;
+    --btn-active-color: white;
+    --btn-shadow-color: #b2a295;
+    --special-btn-bg-color: #647299;
+    --special-btn-color: #fbfdfc;
+    --special-btn-active-color: #a2b3e1;
+    --special-btn-shadow-color: #414e71;
+    --eq-btn-bg-color: #d13f30;
+    --eq-btn-color: #fbfdfc;
+    --eq-btn-active-color: #f96c5b;
+    --eq-btn-shadow-color: #96271c;
+    font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
+
+
+body {
+    color: var(--color);
+    background-color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+#root {
+    margin: auto auto;
+}
+
+.default-theme {
+    --bg-color: #3b4664;
+    --color: #feffff;
+    --theme-switcher-bg-color: #222a41;
+    --theme-switcher-color: #d63c34;
+    --display-bg-color: #181f32;
+    --display-color: #fdfffe;
+    --btns-panel-bg-color: #252d44;
+    --btn-bg-color: #eae3db;
+    --btn-color: #494b57;
+    --btn-active-color: white;
+    --btn-shadow-color: #b2a295;
+    --special-btn-bg-color: #647299;
+    --special-btn-color: #fbfdfc;
+    --special-btn-active-color: #a2b3e1;
+    --special-btn-shadow-color: #414e71;
+    --eq-btn-bg-color: #d13f30;
+    --eq-btn-color: #fbfdfc;
+    --eq-btn-active-color: #f96c5b;
+    --eq-btn-shadow-color: #96271c;
+}
+
+.light-theme {
+    --bg-color: #e6e6e6;
+    --color: #40413b;
+    --theme-switcher-bg-color: #d3cdcd;
+    --theme-switcher-color: #d15300;
+    --display-bg-color: #eeeeee;
+    --display-color: #40413b;
+    --btns-panel-bg-color: #d3cdcd;
+    --btn-bg-color: #e5e4e0;
+    --btn-color: #40413b;
+    --btn-active-color: white;
+    --btn-shadow-color: #a69e91;
+    --special-btn-bg-color: #388187;
+    --special-btn-color: white;
+    --special-btn-active-color: #62b5bd;
+    --special-btn-shadow-color: #1d5c65;
+    --eq-btn-bg-color: #c85401;
+    --eq-btn-color: white;
+    --eq-btn-active-color: #ff8b38;
+    --eq-btn-shadow-color: #873600;
+}
+
+.dark-theme {
+    --bg-color: #17062a;
+    --color: #fce43c;
+    --theme-switcher-bg-color: #1e0836;
+    --theme-switcher-color: #00ebd4;
+    --display-bg-color: #1e0836;
+    --display-color: #fed943;
+    --btns-panel-bg-color: #1e0836;
+    --btn-bg-color: #331b4d;
+    --btn-color: #f9de45;
+    --btn-active-color: #6b34ac;
+    --btn-shadow-color: #86209d;
+    --special-btn-bg-color: #56077c;
+    --special-btn-color: white;
+    --special-btn-active-color: #8631b0;
+    --special-btn-shadow-color: #bf16f5;
+    --eq-btn-bg-color: #00decf;
+    --eq-btn-color: black;
+    --eq-btn-active-color: #94fff9;
+    --eq-btn-shadow-color: #6cf9f0;
+}
+
+@media (prefers-color-scheme: dark) {}

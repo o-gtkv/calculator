@@ -1,0 +1,22 @@
+:root {
+    --bg-color: #17062a;
+    --color: #fce43c;
+    --theme-switcher-bg-color: #1e0836;
+    --theme-switcher-color: #00ebd4;
+    --display-bg-color: #1e0836;
+    --display-color: #fed943;
+    --btns-panel-bg-color: #1e0836;
+    --btn-bg-color: #331b4d;
+    --btn-color: #f9de45;
+    --btn-active-color: #6b34ac;
+    --btn-shadow-color: #86209d;
+    --special-btn-bg-color: #56077c;
+    --special-btn-color: white;
+    --special-btn-active-color: #8631b0;
+    --special-btn-shadow-color: #bf16f5;
+    --eq-btn-bg-color: #00decf;
+    --eq-btn-color: black;
+    --eq-btn-active-color: #94fff9;
+    --eq-btn-shadow-color: #6cf9f0;
+    font-size: 16px;
+}

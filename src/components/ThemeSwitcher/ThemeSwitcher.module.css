@@ -1,0 +1,71 @@
+.label {
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-size: 0.833333333rem;
+}
+
+.themeSwitcherWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.themeSwitcher {
+    position: relative;
+    display: flex;
+    border-radius: 75px;
+    padding: 3px;
+    background-color: var(--theme-switcher-bg-color);
+}
+
+.radioBtn {
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+}
+
+.switcher {
+    position: absolute;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--theme-switcher-color);
+    transition: left 0.5s ease;
+}
+
+.radioBtn:nth-child(1):checked~.switcher {
+    left: 3px;
+}
+
+.radioBtn:nth-child(2):checked~.switcher {
+    left: 19px;
+}
+
+.radioBtn:nth-child(3):checked~.switcher {
+    left: 35px;
+}
+
+.radioBtn:nth-child(1)::before {
+    content: "1";
+}
+
+.radioBtn:nth-child(2)::before {
+    content: "2";
+}
+
+.radioBtn:nth-child(3)::before {
+    content: "3";
+}
+
+.radioBtn:nth-child(1)::before,
+.radioBtn:nth-child(2)::before,
+.radioBtn:nth-child(3)::before {
+    cursor: pointer;
+    position: absolute;
+    color: var(--color);
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%);
+}
