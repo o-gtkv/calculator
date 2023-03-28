@@ -57,7 +57,7 @@ export default function Calculcator(): JSX.Element {
                 else if (!displayResetFlag.current) {
                     const res = String(calc(Number(memory.current), Number(displayValue), operation.current))
                     memory.current = res
-                    setDisplayValue(() => res)
+                    setDisplayValue(res)
                 }
                 operation.current = btn.innerText
                 displayResetFlag.current = true
@@ -95,7 +95,7 @@ export default function Calculcator(): JSX.Element {
     return (
         <div className={style.calculator}>
             <div className={style.topPanel}>
-                <span className={style.appName}>calc</span>
+                <h1 className={style.appName}>calc</h1>
                 <div className={style.themeSwitcherWrapper}>
                     <ThemeSwitcher />
                 </div>
