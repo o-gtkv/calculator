@@ -1,47 +1,7 @@
 @import-normalize;
 
 :root {
-    --bg-color: #3b4664;
-    --color: #feffff;
-    --theme-switcher-bg-color: #222a41;
-    --theme-switcher-color: #d63c34;
-    --display-bg-color: #181f32;
-    --display-color: #fdfffe;
-    --btns-panel-bg-color: #252d44;
-    --btn-bg-color: #eae3db;
-    --btn-color: #494b57;
-    --btn-active-color: white;
-    --btn-shadow-color: #b2a295;
-    --special-btn-bg-color: #647299;
-    --special-btn-color: #fbfdfc;
-    --special-btn-active-color: #a2b3e1;
-    --special-btn-shadow-color: #414e71;
-    --eq-btn-bg-color: #d13f30;
-    --eq-btn-color: #fbfdfc;
-    --eq-btn-active-color: #f96c5b;
-    --eq-btn-shadow-color: #96271c;
     font-size: 16px;
-}
-
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
-
-
-body {
-    color: var(--color);
-    background-color: var(--bg-color);
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0;
-    display: flex;
-    height: 100vh;
-}
-
-#root {
-    margin: auto auto;
 }
 
 .default-theme {
@@ -110,4 +70,36 @@ body {
     --eq-btn-shadow-color: #6cf9f0;
 }
 
-@media (prefers-color-scheme: dark) {}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color);
+    background-color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+#root {
+    margin: auto auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+}

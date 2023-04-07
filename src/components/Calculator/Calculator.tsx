@@ -51,7 +51,7 @@ export default function Calculcator(): JSX.Element {
                     }
                 }
                 break;
-            case '+': case '-': case 'x': case '/':
+            case '+': case '-': case '✕': case '/':
                 if (operation.current === '')
                     memory.current = displayValue
                 else if (!displayResetFlag.current) {
@@ -95,13 +95,15 @@ export default function Calculcator(): JSX.Element {
     return (
         <div className={style.calculator}>
             <div className={style.topPanel}>
-                <h1 className={style.appName}>calc</h1>
+                <h2 className={style.appName}>calc</h2>
                 <div className={style.themeSwitcherWrapper}>
                     <ThemeSwitcher />
                 </div>
             </div>
-            <div className={style.displayWraper}>
+            <div className={style.displayWrapper}>
+                <label className='sr-only' htmlFor="display">display</label>
                 <input
+                    id="display"
                     className={style.display}
                     type="text"
                     readOnly={true}
@@ -126,7 +128,7 @@ export default function Calculcator(): JSX.Element {
                 <button className={style.btn}>.</button>
                 <button className={style.btn}>0</button>
                 <button className={style.btn}>/</button>
-                <button className={style.btn}>x</button>
+                <button className={style.btn}>✕</button>
                 <button className={`${style.resetBtn} ${style.specialBtn}`}>reset</button>
                 <button className={style.eqBtn}>=</button>
             </div>

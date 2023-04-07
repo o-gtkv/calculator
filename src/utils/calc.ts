@@ -4,7 +4,7 @@ export function calc(a: number, b: number, op: string): number | undefined {
             return a + b
         case '-':
             return a - b
-        case 'x':
+        case '✕':
             return a * b
         case '/':
             return a / b

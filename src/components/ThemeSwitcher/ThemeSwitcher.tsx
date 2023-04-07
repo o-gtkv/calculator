@@ -3,31 +3,37 @@ import { ChangeEvent, useEffect, useState } from 'react'
 import style from './ThemeSwitcher.module.css'
 
 export default function ThemeSwitcher(): JSX.Element {
-    const [currentThemeClassName, setCurrentThemeClassName] = useState(`${localStorage.getItem('theme')}-theme`)
-
-    useEffect(() => {
-        document.body.classList.add(currentThemeClassName)
+    const [currentThemeClassName, setCurrentThemeClassName] = useState(() => {
+        const themeName = localStorage.getItem('theme')
+        if (themeName)
+            return `${themeName}-theme`
+        return 'default-theme'
     })
 
-    function handleRadio1OnChange(e: ChangeEvent) {
+    /* eslint-disable */
+    useEffect(() => {
+        document.body.classList.add(currentThemeClassName)
+    }, [])
+    /* eslint-enable */
+
+    function setTheme(themeName: string) {
+        const themeClassName = `${themeName}-theme`
         document.body.classList.remove(currentThemeClassName)
-        document.body.classList.add('default-theme')
-        localStorage.setItem('theme', 'default')
-        setCurrentThemeClassName('default-theme')
+        document.body.classList.add(themeClassName)
+        localStorage.setItem('theme', themeName)
+        setCurrentThemeClassName(themeClassName)
+    }
+
+    function handleRadio1OnChange(e: ChangeEvent) {
+        setTheme('default')
     }
 
     function handleRadio2OnChange(e: ChangeEvent) {
-        document.body.classList.remove(currentThemeClassName)
-        document.body.classList.add('light-theme')
-        localStorage.setItem('theme', 'light')
-        setCurrentThemeClassName('light-theme')
+        setTheme('light')
     }
 
     function handleRadio3OnChange(e: ChangeEvent) {
-        document.body.classList.remove(currentThemeClassName)
-        document.body.classList.add('dark-theme')
-        localStorage.setItem('theme', 'dark')
-        setCurrentThemeClassName('dark-theme')
+        setTheme('dark')
     }
 
     return (
@@ -37,7 +43,8 @@ export default function ThemeSwitcher(): JSX.Element {
                 <input
                     className={style.radioBtn}
                     type="radio"
-                    name="themeSwitcher" aria-label="default theme"
+                    name="themeSwitcher"
+                    aria-label="default theme"
                     checked={currentThemeClassName === 'default-theme'}
                     onChange={handleRadio1OnChange}
                 />
