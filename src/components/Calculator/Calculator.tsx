@@ -100,18 +100,16 @@ export default function Calculcator(): JSX.Element {
                     <ThemeSwitcher />
                 </div>
             </div>
-            <div className={style.displayWrapper}>
-                <label className='sr-only' htmlFor="display">display</label>
-                <input
-                    id="display"
-                    className={style.display}
-                    type="text"
-                    readOnly={true}
-                    size={1}
-                    value={displayValue}
-                    aria-label="display"
-                />
-            </div>
+            <label className='sr-only' htmlFor="display">display</label>
+            <input
+                id="display"
+                className={style.display}
+                type="text"
+                readOnly={true}
+                size={1}
+                value={displayValue}
+                aria-label="display"
+            />
             <div className={style.btnsPanel} onClick={handleBtnsPanelClick}>
                 <button className={style.btn}>7</button>
                 <button className={style.btn}>8</button>

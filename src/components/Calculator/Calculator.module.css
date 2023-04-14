@@ -64,15 +64,11 @@
     background-color: var(--eq-btn-active-color);
 }
 
-.displayWrapper {
-    display: flex;
-    margin-top: 35px;
-}
-
 .display {
-    flex: 1;
+    width: 100%;
     font-size: 3.125rem;
     font-weight: 600;
+    margin-top: 35px;
     padding: 30px;
     text-align: right;
     color: var(--display-color);
